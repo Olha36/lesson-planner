@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --color-primary: #6366f1;
+  --color-primary-purple: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-primary-soft: #ede9fe;
+  --color-cyan: #06b6d4;
+  --color-emerald: #10b981;
+  --color-teal: #14b8a6;
+  --color-teal-light: #ccfbf1;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-muted: #64748b;
+  --color-text-placeholder: #94a3b8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-border: #cbd5e1;
+  --color-divider: #e2e8f0;
+
+  --color-background-light: #f1f5f9;
+  --color-background: #ffffff;
+
+  --color-success: #22c55e;
+  --color-info: #3b82f6;
+  --color-warning: #fbbf24;
+  --color-error: #ef4444;
+  --color-accent: #8b5cf6;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #6366f1 0%,
+    #a78bfa 100%
+  );
+
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #06b6d4 0%,
+    #10b981 100%
+  );
+
+  --background: var(--color-background);
+  --foreground: var(--color-text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-primary-purple: var(--color-primary-purple);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-soft: var(--color-primary-soft);
+
+  --color-cyan: var(--color-cyan);
+  --color-emerald: var(--color-emerald);
+  --color-teal: var(--color-teal);
+  --color-teal-light: var(--color-teal-light);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-placeholder: var(--color-text-placeholder);
+
+  --color-border: var(--color-border);
+  --color-divider: var(--color-divider);
+
+  --color-background-light: var(--color-background-light);
+  --color-background: var(--color-background);
+
+  --color-success: var(--color-success);
+  --color-info: var(--color-info);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-accent: var(--color-accent);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-placeholder);
 }
