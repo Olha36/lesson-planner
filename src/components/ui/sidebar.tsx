@@ -61,7 +61,7 @@ export function Sidebar({ children, className = "" }: SidebarProps) {
         "flex h-svh shrink-0 flex-col bg-white",
         "border-r border-black/5 shadow-[0_0_0_1px_rgba(0,0,0,0.02)]",
         "transition-[width] duration-300 ease-in-out",
-        open ? "w-[290px]" : "w-[84px]",
+        open ? "w-[290px]" : "w-[100px]",
         className,
       ].join(" ")}
     >

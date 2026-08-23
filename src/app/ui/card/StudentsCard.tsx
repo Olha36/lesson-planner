@@ -9,18 +9,18 @@ type StudentsCardProps = {
 
 const StudentsCard = ({ name, age, goal, avatar }: StudentsCardProps) => {
   return (
-    <>
-      <div className="shadow-xl max-w-[150px] p-4 flex gap-5 items-start justify-center">
-        <div>
-          <Image src={avatar} alt="image" />
-        </div>
-        <div>
-          <h3 className="text-xl font-bold">{name}</h3>
-          <p >{age}</p>
-          <p className=" text-indigo-600">{goal}</p>
-        </div>
+    <article className="flex max-w-[240px] items-start gap-4 rounded-2xl bg-white p-4 shadow-xl">
+      <Image
+        src={avatar}
+        alt={`${name} avatar`}
+        className="h-12 w-12 rounded-full object-cover"
+      />
+      <div className="min-w-0">
+        <h3 className="truncate text-lg font-semibold">{name}</h3>
+        <p className="text-sm text-[var(--color-text-secondary)]">{age}</p>
+        <p className="mt-1 text-sm font-medium text-indigo-600">{goal}</p>
       </div>
-    </>
+    </article>
   );
 };
 

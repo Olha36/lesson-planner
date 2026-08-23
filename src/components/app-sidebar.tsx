@@ -166,9 +166,9 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 flex-wrap">
           <LogoMark />
-          <h2 className="text-2xl font-semibold tracking-[-0.02em] text-[#111827]">
+          <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
             AI Lesson Planner
           </h2>
         </div>
