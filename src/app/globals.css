@@ -97,3 +97,123 @@ input::placeholder,
 textarea::placeholder {
   color: var(--color-text-placeholder);
 }
+
+/* Dashboard: compact lesson list and quick action panel */
+.recent-lessons {
+  overflow: hidden;
+  margin-bottom: 6px;
+  border: 1px solid #e8eaf0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.recent-lesson-row {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.recent-lesson-avatar {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.recent-lesson-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.recent-lesson-copy h3 {
+  margin: 0 0 4px;
+  color: var(--color-text-primary);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.recent-lesson-meta {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.recent-lesson-meta span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recent-lesson-date,
+.recent-lesson-duration {
+  flex: 0 0 auto;
+  color: var(--color-text-muted);
+  font-size: 10px;
+}
+
+.quick-actions-panel {
+  height: 100%;
+  padding: 14px;
+  border: 1px solid #e8eaf0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.quick-action {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 7px 2px;
+  color: var(--color-primary-purple);
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.quick-action:hover {
+  color: #6d3de0;
+}
+
+.quick-action > svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  margin-top: 2px;
+  stroke-width: 2;
+}
+
+.quick-action span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.quick-action strong {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.quick-action small {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+@media (max-width: 640px) {
+  .recent-lesson-row {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .recent-lesson-date {
+    display: none;
+  }
+}

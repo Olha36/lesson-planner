@@ -7,6 +7,7 @@ type BtnProps = {
   fullWidth?: boolean;
   disabled?: boolean;
   onClick?: () => void;
+  className?: string;
 };
 
 export default function Btn({
@@ -15,68 +16,64 @@ export default function Btn({
   fullWidth = false,
   disabled = false,
   onClick,
+  className = "",
 }: BtnProps) {
   return (
     <Button
       variant={variant}
-      fullWidth={fullWidth}
-      disabled={disabled}
+      type="button"
       onClick={onClick}
+      disabled={disabled}
+      aria-disabled={disabled}
+      fullWidth={fullWidth}
+      className={className}
       sx={{
-        backgroundColor:
-          variant === "contained" ? "var(--color-primary)" : "transparent",
-
-        color:
-          variant === "contained"
-            ? "var(--color-background)"
-            : "var(--color-primary)",
-
-        borderColor: "var(--color-primary)",
-
         borderRadius: "10px",
-
         padding: {
           xs: "10px 16px",
           sm: "11px 20px",
         },
-
         fontSize: {
           xs: "14px",
           sm: "15px",
         },
-
         fontWeight: 600,
         textTransform: "none",
-
         transition: "all 0.2s ease",
 
-        "&:hover": {
-          backgroundColor:
-            variant === "contained"
-              ? "var(--color-primary-purple)"
-              : "var(--color-primary-soft)",
+        ...(variant === "contained" && {
+          backgroundColor: "var(--color-primary)",
+          color: "var(--color-background)",
+          border: "1px solid var(--color-primary)",
 
-          borderColor: "var(--color-primary-purple)",
+          "&:hover": {
+            backgroundColor: "var(--color-primary-purple)",
+            borderColor: "var(--color-primary-purple)",
+          },
 
-          color:
-            variant === "contained"
-              ? "var(--color-background)"
-              : "var(--color-primary-purple)",
-        },
+          "&:disabled": {
+            backgroundColor: "var(--color-primary-light)",
+            color: "var(--color-background)",
+            borderColor: "var(--color-primary-light)",
+          },
+        }),
 
-        "&:disabled": {
-          backgroundColor:
-            variant === "contained"
-              ? "var(--color-primary-light)"
-              : "transparent",
+        ...(variant === "outlined" && {
+          backgroundColor: "transparent",
+          color: "var(--color-primary)",
+          borderColor: "var(--color-primary)",
 
-          color:
-            variant === "contained"
-              ? "var(--color-background)"
-              : "var(--color-text-placeholder)",
+          "&:hover": {
+            backgroundColor: "var(--color-primary-soft)",
+            borderColor: "var(--color-primary-purple)",
+            color: "var(--color-primary-purple)",
+          },
 
-          borderColor: "var(--color-border)",
-        },
+          "&:disabled": {
+            color: "var(--color-text-placeholder)",
+            borderColor: "var(--color-border)",
+          },
+        }),
       }}
     >
       {text}
