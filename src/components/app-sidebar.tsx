@@ -10,6 +10,7 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar";
 import Avatar from "../../public/avatar.png";
+import Link from "next/link";
 
 function LogoMark() {
   return (
@@ -167,7 +168,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="flex items-center gap-4 flex-wrap">
-          <LogoMark />
+       <Link href="/dashboard"><LogoMark /></Link>   
           <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
             AI Lesson Planner
           </h2>
@@ -178,7 +179,7 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenuItem active icon={<DashboardIcon />}>
-              Dashboard
+              <Link href="/dashboard">Dashboard</Link>
             </SidebarMenuItem>
             <SidebarMenuItem icon={<StudentsIcon />}>Students</SidebarMenuItem>
             <SidebarMenuItem icon={<LessonsIcon />}>Lessons</SidebarMenuItem>
