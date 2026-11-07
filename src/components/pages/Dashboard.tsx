@@ -1,18 +1,19 @@
-import Btn from "../ui/button/Button";
-import AnalyticsCard from "../ui/card/AnalyticsCard";
-import StudentsCard from "../ui/card/StudentsCard";
 import studentAvatar from "../../../public/avatar.png";
 import { Box } from "@mui/material";
 import Link from "next/link";
-import RecentLessons from "../ui/recentLessons/RecentLessons";
-import QuickActions from "../ui/quickActions/QuickActions";
+
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import Btn from "@/app/ui/button/Button";
+import AnalyticsCard from "@/app/ui/card/AnalyticsCard";
+import StudentsCard from "@/app/ui/card/StudentsCard";
+import RecentLessons from "@/app/ui/recentLessons/RecentLessons";
+import QuickActions from "@/app/ui/quickActions/QuickActions";
 
 export default function DashboardPage() {
   return (
     <SidebarProvider>
-         <AppSidebar />
+      <AppSidebar />
       <main className="flex min-h-svh flex-1 flex-col gap-6 bg-[var(--color-background-light)] p-6">
         <div className="flex items-center justify-between">
           <SidebarTrigger />

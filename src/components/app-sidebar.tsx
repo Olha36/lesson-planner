@@ -168,7 +168,7 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="flex items-center gap-4 flex-wrap">
-       <Link href="/dashboard"><LogoMark /></Link>   
+       <Link href="/"><LogoMark /></Link>   
           <h2 className="text-xl font-semibold tracking-[-0.02em] text-[#111827]">
             AI Lesson Planner
           </h2>
@@ -179,9 +179,11 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenuItem active icon={<DashboardIcon />}>
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/">Dashboard</Link>
             </SidebarMenuItem>
-            <SidebarMenuItem icon={<StudentsIcon />}>Students</SidebarMenuItem>
+            <SidebarMenuItem icon={<StudentsIcon />}>
+            <Link href="/students">Students</Link>
+            </SidebarMenuItem>
             <SidebarMenuItem icon={<LessonsIcon />}>Lessons</SidebarMenuItem>
             <SidebarMenuItem icon={<ResourcesIcon />}>
               Resources
