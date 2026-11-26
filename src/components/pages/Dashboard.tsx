@@ -7,8 +7,8 @@ import { AppSidebar } from "@/components/app-sidebar";
 import Btn from "@/app/ui/button/Button";
 import AnalyticsCard from "@/app/ui/card/AnalyticsCard";
 import StudentsCard from "@/app/ui/card/StudentsCard";
-import RecentLessons from "@/app/ui/recentLessons/RecentLessons";
-import QuickActions from "@/app/ui/quickActions/QuickActions";
+import RecentLessons from "@/app/components/recentLessons/RecentLessons";
+import QuickActions from "@/app/components/quickActions/QuickActions";
 
 export default function DashboardPage() {
   return (

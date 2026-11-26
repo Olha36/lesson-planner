@@ -7,8 +7,9 @@ type StudentsCardProps = {
   age: string | number;
   goal: string;
   avatar: StaticImageData;
-  lastLesson: string;
+  lastLesson?: string;
   viewProfile?: string;
+  level?: string;
 };
 
 const StudentsCard = ({
